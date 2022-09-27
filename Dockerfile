@@ -9,4 +9,4 @@ WORKDIR /app
 VOLUME /tmp /app/logs
 EXPOSE 8080
 ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dlog.file.path=/app/logs -jar /app/app.jar
+ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dlogging.file.path=/app/logs -jar /app/app.jar

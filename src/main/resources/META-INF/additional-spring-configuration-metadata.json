@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "proxy.host",
+    "type": "java.lang.String",
+    "description": "Internet proxy host name"
+  },
+  {
+    "name": "proxy.port",
+    "type": "java.lang.Integer",
+    "description": "Internet proxy port"
+  },
+  {
+    "name": "helper.audit-event-repository-capacity",
+    "type": "java.lang.Long",
+    "description": "Number of entries stored in circular buffer of InMemoryAuditEventRepository"
+  },
+  {
+    "name": "gitlab.server-url",
+    "type": "java.lang.String",
+    "description": "URL of GitLab server"
+  },
+  {
+    "name": "gitlab.personal-access-token",
+    "type": "java.lang.String",
+    "description": "Personal access token of user with admin permission in GitLab"
+  },
+  {
+    "name": "gitlab.per-page",
+    "type": "java.lang.Integer",
+    "description": "Number of entries per response from GitLab"
+  }
+  ]}

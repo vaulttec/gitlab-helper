@@ -1,0 +1,8 @@
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: debug
+    org.vaulttec: debug
+
+gitlab:
+  server-url: http://torstens-macbook-pro.local:8083
+  personal-access-token: eMV6M2escrtxBWRHquts

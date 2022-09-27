@@ -1,0 +1,16 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - health
+        - info
+        - auditevents
+
+proxy:
+  host: ${HTTP_PROXY_HOST}
+  port: ${HTTP_PROXY_PORT}
+
+gitlab:
+  server-url: ${GITLAB_SERVER_URL}
+  personal-access-token: ${GITLAB_PERSONAL_ACCESS_TOKEN}

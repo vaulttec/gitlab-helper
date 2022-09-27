@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Gitlab Helper
+  main:
+    banner-mode: "off"
+
+logging:
+  file:
+    max-history: 10
+  level:
+    org.springframework: info
+    org.vaulttec: info
+
+server:
+  error:
+    include-stacktrace: on_param
+
+proxy:
+  host:
+  port: 3128
+
+helper:
+  audit-event-repository-capacity: 1000
+
+gitlab:
+  server-url:
+  personal-access-token:
+  per-page: 100

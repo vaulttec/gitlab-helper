@@ -5,9 +5,6 @@ spring:
     banner-mode: "off"
 
 logging:
-  logback:
-    rollingpolicy:
-      max-file-size: 10
   level:
     org.springframework: info
     org.vaulttec: info

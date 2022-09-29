@@ -66,7 +66,7 @@ public class GroupVariablesController {
   @PostMapping(path = "/groups/{groupId}/variables", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
   public Variable createGroupVariable(@RequestHeader("PRIVATE-TOKEN") String personalAccessToken, @PathVariable long groupId, Variable variable) {
     GLUser user = getUser(personalAccessToken);
-    LOG.info("Creating variable '{}' in group {} for user {}", variable, groupId, user.getUsername());
+    LOG.info("Creating {} in group {} for user {}", variable, groupId, user.getUsername());
     checkVariable(variable);
     GLMembership groupMembership = getGroupMembership(user, groupId);
     List<GLVariable> variables = getGroupVariables(groupMembership);
@@ -83,7 +83,7 @@ public class GroupVariablesController {
   @PutMapping(path = "/groups/{groupId}/variables", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
   public Variable updateGroupVariable(@RequestHeader("PRIVATE-TOKEN") String personalAccessToken, @PathVariable long groupId, Variable variable) {
     GLUser user = getUser(personalAccessToken);
-    LOG.info("Updating variable '{}' in group {} for user {}", variable, groupId, user.getUsername());
+    LOG.info("Updating {} in group {} for user {}", variable, groupId, user.getUsername());
     checkVariable(variable);
     GLMembership groupMembership = getGroupMembership(user, groupId);
     List<GLVariable> variables = getGroupVariables(groupMembership);
@@ -100,7 +100,7 @@ public class GroupVariablesController {
   @DeleteMapping("/groups/{groupId}/variables/{key}")
   public void deleteGroupVariable(@RequestHeader("PRIVATE-TOKEN") String personalAccessToken, @PathVariable long groupId, @PathVariable String key) {
     GLUser user = getUser(personalAccessToken);
-    LOG.info("Deleting variable '{}' in group {} for user {}", key, groupId, user.getUsername());
+    LOG.info("Deleting variable {} in group {} for user {}", key, groupId, user.getUsername());
     if (!StringUtils.hasText(key)) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Missing required param 'key'");
     }
